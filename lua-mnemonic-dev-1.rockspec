@@ -20,4 +20,9 @@ build = {
     modules = {
         ['mnemonic'] = 'src/mnemonic/mnemonic.lua',
     },
+    install = {
+        bin = {
+            "src/bin/mnemonic",
+        },
+    },
 }

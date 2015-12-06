@@ -1,0 +1,12 @@
+#!/usr/bin/env lua
+
+-- lua-mnemonic, Return random words from the list
+-- Copyright (c) 2015 Boris Nagaev
+-- See the LICENSE file for terms of use.
+
+local mnemonic = require 'mnemonic'
+
+local n = tonumber(arg[1])
+math.randomseed(os.time())
+local words = mnemonic.randomWords(n, math.random)
+print(table.concat(words, "-"))
