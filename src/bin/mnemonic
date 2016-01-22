@@ -12,6 +12,9 @@ local random
 if has_arc4random then
     random = arc4random.random
 else
+    print('*** Warning! Using insecure math.random ***')
+    print('Install arc4random to get more secure random.')
+    print()
     math.randomseed(os.time())
     random = math.random
 end
